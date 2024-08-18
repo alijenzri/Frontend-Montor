@@ -1,0 +1,262 @@
+/*
+    IMPORTING FONT FROM GOOFLE-FONT
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+/*
+    RESET
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*
+    ROOT-VARIABLE DECLARATIONS
+*/
+:root {
+    /** COLOR **/
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --paragraph-color: hsla(0, 0%, 100%, 0.75);
+    /* (background, headings, buttons) */
+    --BG-color: hsl(0, 0%, 95%);
+    /** MARGIN **/
+    --margin-bottom: 30px;
+    --P-MARGIN-B: 130px;
+    /** PADING */
+    --padding: 40px;
+    --BUTTON_PADDING: 15px 20px;
+    /** WIDTH HEIGTH **/
+    --BOX-DSIGN-W: 370px;
+    --BOX-DSIGN-H: 540px;
+    --LINK-W: 55%;
+    /** FONT-SIZE **/
+    --FS-BODY: 1rem;
+    --FS-H1: 50px;
+    --FS-P: 0.85rem;
+}
+
+/*
+    GENRAL STYLES
+*/
+body {
+    align-items: center;
+    background-color: var(--BG-color);
+    display: flex;
+    font-family: 'Lexend Deca';
+    font-size: var(--FS-BODY);
+    font-weight: 400;
+    height: 100vh;
+    justify-content: center;
+}
+
+a {
+    background-color: var(--BG-color);
+    border-radius: 30px;
+    padding: var(--BUTTON_PADDING);
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.4s ease;
+}
+
+a:hover {
+    transform: scale(1.1);
+}
+
+/*
+    BOX-DISGN
+*/
+.box-disgn {
+    background-color: var(--bright-orange);
+    display: flex;
+    flex-direction: column;
+    height: var(--BOX-DSIGN-H);
+    padding-right: var(--padding-right);
+    padding: var(--padding);
+    width: var(--BOX-DSIGN-W);
+}
+
+.box-disgn__img {
+    height: 40px;
+    margin-bottom: var(--margin-bottom);
+    width: 64px;
+}
+
+.box-disgn__h1 {
+    color: var(--BG-color);
+    font-family: 'Big Shoulders Display';
+    font-size: var(--FS-H1);
+    font-weight: 700;
+    margin-bottom: var(--margin-bottom);
+    text-transform: uppercase;
+}
+
+.box-disgn__p {
+    color: var(--paragraph-color);
+    font-size: var(--FS-P);
+    line-height: 2;
+    margin-bottom: var(--P-MARGIN-B);
+    width: 70%;
+}
+
+.box-disgn__link {
+    width: var(--LINK-W);
+}
+
+#sedans {
+    background-color: var(--bright-orange);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#sedans a {
+    color: var(--bright-orange);
+}
+
+#suvs {
+    background-color: var(--dark-cyan);
+}
+
+#suvs a {
+    color: var(--dark-cyan);
+}
+
+#luxury {
+    background-color: var(--very-dark-cyan);
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#luxury a {
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (max-width: 1250px) {
+    :root {
+        /** MARGIN **/
+        --margin-bottom: calc(30px * 0.9);
+        --P-MARGIN-B: calc(130px * 0.9);
+        /** PADDING **/
+        --padding: calc(40px * 0.9);
+        --BUTTON_PADDING: calc(15px * 0.9) calc(20px * 0.9);
+        /** WIDTH HEIGHT **/
+        --BOX-DSIGN-W: calc(370px * 0.9);
+        --BOX-DSIGN-H: calc(540px * 0.9);
+        --LINK-W: calc(50% * 0.9);
+        /** FONT-SIZE **/
+        --FS-BODY: calc(1rem * 0.9);
+        --FS-H1: calc(50px * 0.9);
+        --FS-P: calc(0.85rem * 0.9);
+    }
+}
+
+@media screen and (max-width: 1047px) {
+    :root {
+        /** MARGIN **/
+        --margin-bottom: calc(30px * 0.8);
+        --P-MARGIN-B: calc(130px * 0.7);
+        /** PADDING **/
+        --padding: calc(40px * 0.8);
+        --BUTTON_PADDING: calc(15px * 0.8) calc(20px * 0.8);
+        /** WIDTH HEIGHT **/
+        --BOX-DSIGN-W: calc(370px * 0.8);
+        --BOX-DSIGN-H: calc(540px * 0.8);
+        /** FONT-SIZE **/
+        --FS-BODY: calc(1rem * 0.8);
+        --FS-H1: calc(50px * 0.8);
+        --FS-P: calc(0.85rem * 0.8);
+    }
+}
+
+@media screen and (max-width: 935px) {
+    :root {
+        /** MARGIN **/
+        --margin-bottom: calc(30px * 0.69);
+        --P-MARGIN-B: calc(130px * 0.6);
+        /** PADDING **/
+        --padding: calc(40px * 0.69);
+        --BUTTON_PADDING: calc(15px * 0.69) calc(20px * 0.69);
+        /** WIDTH HEIGHT **/
+        --BOX-DSIGN-W: calc(370px * 0.69);
+        --BOX-DSIGN-H: calc(540px * 0.69);
+        /** FONT-SIZE **/
+        --FS-BODY: calc(1rem * 0.69);
+        --FS-H1: calc(50px * 0.69);
+        --FS-P: calc(0.85rem * 0.65);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    :root {
+        /** MARGIN **/
+        --margin-bottom: 10px;
+        --P-MARGIN-B: 80px;
+        /** PADING */
+        --padding: 40px 60px;
+        --BUTTON_PADDING: 15px 20px;
+        /** WIDTH HEIGTH **/
+        --BOX-DSIGN-W: 100%;
+        --BOX-DSIGN-H: auto;
+        --LINK-W: 40%;
+        /** FONT-SIZE **/
+        --FS-BODY: 1rem;
+        --FS-H1: 50px;
+        --FS-P: 1rem;
+    }
+
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #luxury,
+    #sedans {
+        border-radius: 0;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    :root {
+        /** MARGIN **/
+        --margin-bottom: 8px;
+        --P-MARGIN-B: 40px;
+        /** PADING */
+        --padding: 32px;
+        --BUTTON_PADDING: 12px 16px;
+        /** WIDTH HEIGTH **/
+        --LINK-W: 50%;
+        /** FONT-SIZE **/
+        --FS-BODY: 0.7rem;
+        --FS-H1: 40px;
+        --FS-P: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    :root {
+        /** MARGIN **/
+        --margin-bottom: 8px;
+        --P-MARGIN-B: 40px;
+        /** PADING */
+        --padding: 32px;
+        --BUTTON_PADDING: 12px 16px;
+        /** WIDTH HEIGTH **/
+        --LINK-W: 50%;
+        /** FONT-SIZE **/
+        --FS-BODY: 0.7rem;
+        --FS-H1: 40px;
+        --FS-P: 0.7rem;
+    }
+}

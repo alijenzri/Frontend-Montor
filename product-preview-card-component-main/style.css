@@ -1,0 +1,206 @@
+/* 
+    FONT IMPORT 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 
+    RESET 
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 
+    VARIABLES 
+*/
+:root {
+    /** COLOR **/
+    --MARGIN_BOTTOM: 27px;
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+/* 
+    LEFT PART 
+*/
+.container__left-part__img-mobile {
+    display: none;
+}
+
+body {
+    align-items: center;
+    background-color: var(--Cream);
+    color: var(--Very-dark-blue);
+    display: flex;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    font-weight: 500;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    max-width: 90%;
+    width: clamp(320px, 90%, 650px);
+}
+
+
+.container__left-part {
+    overflow: hidden;
+    position: relative;
+    width: clamp(250px, 50%, 50%);
+}
+
+.container__left-part__img-desktop {
+    border-radius: 10px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* RIGHT PART */
+.container__right-part {
+    width: clamp(250px, 50%, 50%);
+    padding: clamp(20px, 4%, 35px);
+}
+
+.container__right-part__h4 {
+    text-transform: uppercase;
+    color: var(--Dark-grayish-blue);
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.container__right-part__h1 {
+    line-height: 1;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-family: 'Fraunces';
+    margin-bottom: var(--MARGIN_BOTTOM);
+    font-size: clamp(24px, 3vw, 40px);
+}
+
+.container__right-part__p {
+    font-size: clamp(0.75rem, 1.5vw, 1rem);
+    color: var(--PCOLOR);
+    line-height: 1.5;
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.container__right-part__price {
+    display: flex;
+    justify-content: left;
+    text-align: center;
+    margin-bottom: var(--MARGIN_BOTTOM);
+}
+
+.container__right-part__price-discount {
+    font-family: 'Fraunces';
+    font-weight: 700;
+    margin-right: var(--MARGIN_BOTTOM);
+    color: var(--Dark-cyan);
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    align-self: center;
+}
+
+.container__right-part__price-original {
+    align-self: center;
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.container__right-part__button {
+    background-color: var(--Dark-cyan);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 0.875rem;
+}
+
+.container__right-part__button__img {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 425px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .container__left-part__img-mobile {
+        display: initial;
+        border-radius: 10px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 100%;
+        margin-bottom: clamp(10px, 2%, 20px);
+    }
+
+    .container__left-part,
+    .container__right-part {
+        width: 100%;
+    }
+
+    .container__right-part {
+        padding: 20px;
+        margin-bottom: clamp(10px, 2%, 20px);
+    }
+
+    .container__left-part__img-desktop {
+        display: none;
+    }
+
+    .container__right-part__h1 {
+        font-size: 2.3125rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    :root {
+        --MARGIN_BOTTOM: 15px;
+    }
+
+    .container__right-part__h1 {
+        font-size: 1.875rem;
+    }
+
+    .container__right-part__p {
+        font-size: 0.875rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    :root {
+        --MARGIN_BOTTOM: 0.625rem;
+    }
+
+    .container__right-part__h1 {
+        font-size: 1.625rem;
+    }
+}

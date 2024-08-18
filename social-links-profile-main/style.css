@@ -1,0 +1,142 @@
+/* 
+    FONT IMPORT 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/* 
+    RESET 
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* 
+    VARIABLES 
+*/
+:root {
+    /** COLOR **/
+    --Green: hsl(75, 94%, 50%);
+    --White: hsla(0, 0%, 100%, 0.8);
+    --Grey: hsl(0, 0%, 20%);
+    --Dark-Grey: hsl(0, 0%, 12%);    
+    --Off-Black: hsl(0, 0%, 8%);
+    /** MARGIN **/
+    --MARGIN-B : 20px;
+}
+  
+/* 
+    UTILITY CLASSES 
+*/
+.nowrap {
+    white-space: nowrap;
+}
+
+.line-height {
+    line-height: 1.7;
+    text-align: center;
+}
+  
+/* 
+    GENERAL STYLES 
+*/
+body {
+    align-items: center;
+    background-color: var(--Off-Black);
+    color: var(--White);
+    display: flex;
+    font: clamp(0.8rem, 1vw, 0.875rem) "Inter"; 
+    height: 100vh;
+    justify-content: center;
+}
+
+a,
+a:visited {
+    background-color: var(--Grey) ;
+    border-radius: 10px;
+    color: var(--White);
+    font-weight: 600;
+    margin-bottom: clamp(10px, 2vw, 15px); 
+    padding: clamp(10px, 2vw, 15px); 
+    text-align: center;
+    text-decoration: none;
+    transition: 0.1s ease-in;
+    width: 100%;
+}
+
+a:hover,
+a:focus {
+    background-color: var(--Green);
+    color: var(--Off-Black);
+}
+
+/* 
+    CONTAINER 
+*/
+.container {
+    align-items: center;
+    background-color: var(--Dark-Grey);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    margin: clamp(5px, 1vw, 10px); 
+    max-width: 400px; 
+    padding: clamp(20px, 3vw, 35px); 
+    width: 100%;
+}
+
+.container__figure {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: var(--MARGIN-B);
+}
+
+.container__figure img{
+    border-radius: 50%;
+    height: 100px;
+    margin-bottom: var(--MARGIN-B);
+    width: 100px;
+}
+
+.container__figure h1 {
+    font-weight: 600;
+}
+
+.container__figure h3 {
+    color: var(--Green);
+    font-size: 0.95rem;
+    margin-bottom: clamp(20px, 3vw, 30px); 
+}
+
+.container__figure p {
+    font-weight: 400;
+}
+
+@media (max-width: 325px) {
+    body {
+      font-size: 0.8rem; 
+    }
+}
+
+@media (min-width: 326px) and (max-width: 375px) { 
+    body {
+      font-size: 0.85rem; 
+    }
+}
+  
+@media (min-width: 376px) and (max-width: 425px) {
+    body {
+      font-size: 0.9rem; 
+    }
+}
